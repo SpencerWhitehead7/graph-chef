@@ -1,0 +1,11 @@
+{
+  "printWidth": 100,
+  "semi": false,
+  "importOrder": [
+    "^@/",
+    "^../",
+    "^./"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}
