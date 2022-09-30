@@ -16,6 +16,7 @@
       "impliedStrict": true,
       "jsx": true
     },
+    "tsconfigRootDir": "./dynamic-app",
     "project": "./tsconfig.json"
   },
   "env": {
