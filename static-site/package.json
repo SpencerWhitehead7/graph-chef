@@ -1,16 +1,38 @@
 {
-  "name": "@example/basics",
+  "name": "graph-chef-static",
+  "version": "0.0.0",
+  "description": "A static cookbook for storing and representing recipes as directed graphs",
+  "author": "Spencer Whitehead",
+  "license": "Unlicense",
+  "homepage": "https://github.com/SpencerWhitehead7/graph-chef#readme",
+  "bugs": {
+    "url": "https://github.com/SpencerWhitehead7/graph-chef/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SpencerWhitehead7/graph-chef.git"
+  },
   "type": "module",
-  "version": "0.0.1",
-  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "lint": "eslint src/**/*.{ts,tsx} --fix",
+    "pretty": "prettier ./src -w"
   },
   "dependencies": {
     "astro": "^1.4.1"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.3.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-astro": "^0.19.0",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.5"
   }
 }
