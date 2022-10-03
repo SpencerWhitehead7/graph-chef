@@ -1,0 +1,27 @@
+---
+import type { RecipeSerialized } from "../../../shared"
+import RecipeDetails from "../components/RecipeDetails"
+import Layout from "../layouts/Layout.astro"
+
+export const getStaticPaths = async () => {
+  const recipes = await Astro.glob<{ default: RecipeSerialized }>("../recipeData/*.ts")
+
+  return recipes.map(({ default: recipe }) => ({
+    params: {
+      recipeId: String(recipe.id),
+    },
+    props: {
+      recipe: recipe,
+    },
+  }))
+}
+
+const { recipe } = Astro.props
+const { title, desc, size, tags } = recipe
+---
+
+<Layout title={`Graph Chef - ${title}`}>
+  <main>
+    <RecipeDetails {title} {desc} {size} {tags} />
+  </main>
+</Layout>
