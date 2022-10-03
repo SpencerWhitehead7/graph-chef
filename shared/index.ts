@@ -23,3 +23,13 @@ type EdgeSerialized = {
   i: number
   o: number
 }
+
+export type RecipeListed = {
+  ingredients: string[]
+  steps: string[]
+}
+
+export const serializedToListed = ({ data: { nodes } }: RecipeSerialized): RecipeListed => ({
+  ingredients: nodes.filter((n) => !Boolean(n.action)).map((n) => n.output),
+  steps: nodes.filter((n) => Boolean(n.action)).map((n) => n.action),
+})

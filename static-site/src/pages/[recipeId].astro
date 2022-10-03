@@ -1,5 +1,8 @@
 ---
-import type { RecipeSerialized } from "../../../shared"
+import { RecipeSerialized, serializedToListed } from "../../../shared"
+import Card from "../components/Card.astro"
+import ListView from "../components/ListView"
+import "../components/ListView.css"
 import RecipeDetails from "../components/RecipeDetails"
 import Layout from "../layouts/Layout.astro"
 
@@ -23,5 +26,8 @@ const { title, desc, size, tags } = recipe
 <Layout title={`Graph Chef - ${title}`}>
   <main>
     <RecipeDetails {title} {desc} {size} {tags} />
+    <Card>
+      <ListView recipe={serializedToListed(recipe)} />
+    </Card>
   </main>
 </Layout>
