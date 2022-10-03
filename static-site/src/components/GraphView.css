@@ -1,0 +1,37 @@
+/* beat the lib's dumb built in styles */
+.react-flow__node {
+  border: none;
+}
+.react-flow__edge-path {
+  stroke: deepskyblue;
+  stroke-width: 2px;
+}
+.react-flow__handle {
+  width: var(--m);
+  height: var(--m);
+  border-radius: var(--s);
+  border: 2px solid deepskyblue;
+  background-color: white;
+}
+
+.ingredientNode {
+  display: flex;
+  text-align: left;
+  max-width: 360px;
+  padding: var(--m);
+  background-color: skyblue;
+  border-radius: var(--s);
+  border: 2px solid deepskyblue;
+}
+
+.ingredientNode__inputs {
+  padding: 0 var(--s) 0 var(--xs);
+  margin-left: var(--xs);
+}
+
+.ingredientNode__action {
+  padding-left: var(--s);
+  display: inline-flex;
+  align-items: center;
+  border-left: 1px dashed;
+}

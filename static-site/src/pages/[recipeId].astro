@@ -1,6 +1,11 @@
 ---
-import { RecipeSerialized, serializedToListed } from "../../../shared"
+// this is incredibly stupid, but astro strips all css imports from my preact comps (not in dev, only on build)
+import "reactflow/dist/base.css"
+
+import { RecipeSerialized, serializedToFlowed, serializedToListed } from "../../../shared"
 import Card from "../components/Card.astro"
+import GraphView from "../components/GraphView"
+import "../components/GraphView.css"
 import ListView from "../components/ListView"
 import "../components/ListView.css"
 import RecipeDetails from "../components/RecipeDetails"
@@ -26,8 +31,33 @@ const { title, desc, size, tags } = recipe
 <Layout title={`Graph Chef - ${title}`}>
   <main>
     <RecipeDetails {title} {desc} {size} {tags} />
-    <Card>
-      <ListView recipe={serializedToListed(recipe)} />
-    </Card>
+    <div class="grid-container">
+      <Card>
+        <!-- TODO:: Some weird, evil interaction between astro, node, ts, and reactflow causes an error when I try to build and bake it out into a static comp -->
+        <!-- Come back later and see if they've sorted themselves out and whether the hydration can be removed -->
+        <GraphView recipe={serializedToFlowed(recipe)} client:only="preact" />
+      </Card>
+      <Card>
+        <ListView recipe={serializedToListed(recipe)} />
+      </Card>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .grid-container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 1fr;
+    row-gap: var(--m);
+    column-gap: var(--m);
+  }
+
+  @media (min-width: 1472px) {
+    .grid-container {
+      grid-template-rows: 1fr;
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+</style>
