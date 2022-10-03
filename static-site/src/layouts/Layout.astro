@@ -18,7 +18,85 @@ const { title } = Astro.props
   </head>
 
   <body>
-    <h1>Graph Chef</h1>
+    <h1>{title}</h1>
     <slot />
+    <style
+      is:global
+      define:vars={{ xs: "4px", s: "8px", m: "16px", l: "32px", xl: "64px", br: "4px" }}
+    >
+      *,
+      *::before,
+      *::after {
+        overflow-wrap: break-word;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      input,
+      button,
+      textarea,
+      select {
+        font: inherit;
+      }
+
+      h1,
+      h2 {
+        padding-bottom: var(--m);
+      }
+      h3,
+      h4 {
+        padding-bottom: var(--s);
+      }
+      h5,
+      h6,
+      p {
+        padding-bottom: var(--xs);
+      }
+
+      button {
+        padding: var(--xs) var(--s);
+        border-radius: var(--xs);
+        border: 2px solid deepskyblue;
+        background-color: skyblue;
+      }
+      a {
+        color: deepskyblue;
+      }
+      main {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+    </style>
+    <style>
+      html,
+      body {
+        min-height: 100vh;
+        min-width: 100vw;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        background-color: azure;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      @media (max-width: 480px) {
+        body {
+          padding: var(--s);
+        }
+      }
+      @media (min-width: 481px) and (max-width: 1024px) {
+        body {
+          padding: var(--m);
+        }
+      }
+      @media (min-width: 1025px) {
+        body {
+          padding: var(--m) var(--l);
+        }
+      }
+    </style>
   </body>
 </html>
