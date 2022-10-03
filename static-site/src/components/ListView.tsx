@@ -11,7 +11,9 @@ const ListView = ({ recipe }: Props) => (
     <h3>Ingredients:</h3>
     <ul className="listView__list">
       {recipe.ingredients.map((ingredient, i) => (
-        <li key={i}>{ingredient}</li>
+        <li key={i} className="listView__uListItem">
+          {ingredient}
+        </li>
       ))}
     </ul>
     <h3>Steps:</h3>

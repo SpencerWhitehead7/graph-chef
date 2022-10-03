@@ -1,0 +1,11 @@
+.recipeRow {
+  padding-bottom: var(--m);
+  border-bottom: 1px solid skyblue;
+  margin-bottom: var(--m);
+}
+
+.recipeRow:last-of-type {
+  padding: unset;
+  border: unset;
+  margin: unset;
+}

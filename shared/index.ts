@@ -56,6 +56,16 @@ type EdgeFlowed = {
   }
 }
 
+export type RecipeSearchable = {
+  id: number
+  title: string
+  desc: string
+  size: string
+  tags: string[]
+  ingredients: string[]
+  steps: string[]
+}
+
 export const serializedToListed = ({ data: { nodes } }: RecipeSerialized): RecipeListed => ({
   ingredients: nodes.filter((n) => !Boolean(n.action)).map((n) => n.output),
   steps: nodes.filter((n) => Boolean(n.action)).map((n) => n.action),
@@ -109,3 +119,20 @@ export const serializedToFlowed = ({
     })),
   }
 }
+
+export const serializedToSearchable = ({
+  id,
+  title,
+  desc,
+  size,
+  tags,
+  data: { nodes },
+}: RecipeSerialized): RecipeSearchable => ({
+  id,
+  title,
+  desc,
+  size,
+  tags,
+  ingredients: nodes.filter((n) => !Boolean(n.action)).map((n) => n.output),
+  steps: nodes.filter((n) => Boolean(n.action)).map((n) => n.action),
+})

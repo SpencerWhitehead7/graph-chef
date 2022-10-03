@@ -1,3 +1,8 @@
 .listView__list {
   margin-left: var(--xl);
 }
+
+.listView__uListItem {
+  /* annoying, but necessary to keep formatting consistent when this appears in a nested list */
+  list-style-type: disc;
+}
