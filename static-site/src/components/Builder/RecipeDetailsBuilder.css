@@ -1,0 +1,10 @@
+.recipeDetailsBuilder__label {
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--s);
+}
+
+.recipeDetailsBuilder__input {
+  margin-left: var(--xs);
+  flex-grow: 1;
+}

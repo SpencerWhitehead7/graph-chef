@@ -1,0 +1,16 @@
+---
+import "reactflow/dist/base.css"
+
+import Builder from "../../components/Builder"
+import "../../components/Builder/Builder.css"
+import "../../components/Builder/Card.css"
+import "../../components/Builder/EditNodePanel.css"
+import "../../components/Builder/GraphViewBuilder.css"
+import "../../components/Builder/RecipeDetailsBuilder.css"
+import "../../components/ListView.css"
+import Layout from "../../layouts/Layout.astro"
+---
+
+<Layout title={`Graph Chef - New Recipe`}>
+  <Builder client:only="preact" />
+</Layout>

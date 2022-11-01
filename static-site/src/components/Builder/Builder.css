@@ -1,0 +1,15 @@
+.grid-container {
+  flex-grow: 1;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
+  row-gap: var(--m);
+  column-gap: var(--m);
+}
+
+@media (min-width: 1472px) {
+  .grid-container {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+  }
+}

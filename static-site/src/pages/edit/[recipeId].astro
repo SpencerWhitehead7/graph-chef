@@ -1,0 +1,32 @@
+---
+import "reactflow/dist/base.css"
+
+import type { RecipeSerialized } from "../../../../shared"
+import Builder from "../../components/Builder"
+import "../../components/Builder/Builder.css"
+import "../../components/Builder/Card.css"
+import "../../components/Builder/EditNodePanel.css"
+import "../../components/Builder/GraphViewBuilder.css"
+import "../../components/Builder/RecipeDetailsBuilder.css"
+import "../../components/ListView.css"
+import Layout from "../../layouts/Layout.astro"
+
+export const getStaticPaths = async () => {
+  const recipes = await Astro.glob<{ default: RecipeSerialized }>("../../recipeData/*.ts")
+
+  return recipes.map(({ default: recipe }) => ({
+    params: {
+      recipeId: String(recipe.id),
+    },
+    props: {
+      recipe,
+    },
+  }))
+}
+
+const { recipe } = Astro.props
+---
+
+<Layout title={`Graph Chef - Edit ${recipe.title}`}>
+  <Builder {recipe} client:only="preact" />
+</Layout>

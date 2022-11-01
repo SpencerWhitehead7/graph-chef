@@ -1,0 +1,36 @@
+.editNodePanel {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: skyblue;
+  padding: var(--m);
+  max-width: 320px;
+  border-radius: var(--xs);
+  z-index: 10; /* to beat nodes in graph */
+}
+
+.editNodePanel__label {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--s);
+}
+
+.editNodePanel__input {
+  margin-left: var(--xs);
+  flex-grow: 1;
+}
+
+.editNodePanel__list {
+  margin-left: var(--m);
+}
+
+.editNodePanel__removeBtn {
+  margin-left: var(--s);
+  width: 32px;
+  height: 32px;
+  background-color: seashell;
+}
+
+.editNodePanel__btn {
+  background-color: seashell;
+}

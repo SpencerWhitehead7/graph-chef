@@ -1,0 +1,12 @@
+/* 
+ * needs to be kept synced with card.astro's styles,
+ * since card is a preact copy of that comp
+*/
+
+.card {
+  flex-grow: 1;
+  background-color: seashell;
+  border: 1px solid deepskyblue;
+  border-radius: var(--s);
+  padding: var(--m);
+}
