@@ -1,8 +1,9 @@
-import { defineConfig } from 'astro/config';
-
-import preact from "@astrojs/preact";
+import preact from "@astrojs/preact"
+import { defineConfig } from "astro/config"
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [preact()]
-});
+  integrations: [preact()],
+  site: "https://SpencerWhitehead7.github.io",
+  base: "/graph-chef",
+})
