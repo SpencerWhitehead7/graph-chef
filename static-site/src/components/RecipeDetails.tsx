@@ -10,7 +10,7 @@ type Props = {
 
 const RecipeDetails = ({ linkHref = "", title, desc, size, tags }: Props) => (
   <div>
-    <h2>{linkHref === "" ? title : <a href={`/graph-chef/static-site${linkHref}`}>{title}</a>}</h2>
+    <h2>{linkHref === "" ? title : <a href={linkHref}>{title}</a>}</h2>
     <p>
       <strong>Description:</strong> {desc}
     </p>
