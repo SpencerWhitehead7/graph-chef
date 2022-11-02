@@ -5,5 +5,5 @@ import { defineConfig } from "astro/config"
 export default defineConfig({
   integrations: [preact()],
   site: "https://SpencerWhitehead7.github.io",
-  base: "/graph-chef",
+  base: "/graph-chef/static-site",
 })
