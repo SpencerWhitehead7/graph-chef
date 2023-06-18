@@ -1,7 +1,7 @@
 import "preact"
 
 type Props = {
-  linkHref: string
+  linkHref?: string
   title: string
   desc: string
   size: string

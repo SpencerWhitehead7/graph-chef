@@ -16,7 +16,7 @@ const RecipeDetailsBuilder = ({ recipe, onChange }: Props) => (
         name="title"
         value={recipe.title}
         onChange={(evt) => {
-          onChange({ title: evt.target.value })
+          onChange({ title: evt.currentTarget.value })
         }}
       />
     </label>
@@ -27,7 +27,7 @@ const RecipeDetailsBuilder = ({ recipe, onChange }: Props) => (
         name="description"
         value={recipe.desc}
         onChange={(evt) => {
-          onChange({ desc: evt.target.value })
+          onChange({ desc: evt.currentTarget.value })
         }}
       />
     </label>
@@ -38,7 +38,7 @@ const RecipeDetailsBuilder = ({ recipe, onChange }: Props) => (
         name="size"
         value={recipe.size}
         onChange={(evt) => {
-          onChange({ size: evt.target.value })
+          onChange({ size: evt.currentTarget.value })
         }}
       />
     </label>
@@ -50,7 +50,9 @@ const RecipeDetailsBuilder = ({ recipe, onChange }: Props) => (
         value={recipe.tags.join(" ")}
         onChange={(evt) => {
           onChange({
-            tags: evt.target.value.split(" ").map((t) => t.toLowerCase().replace(/[^a-z]/g, "")),
+            tags: evt.currentTarget.value
+              .split(" ")
+              .map((t) => t.toLowerCase().replace(/[^a-z]/g, "")),
           })
         }}
       />

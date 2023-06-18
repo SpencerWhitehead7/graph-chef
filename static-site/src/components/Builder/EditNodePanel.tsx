@@ -59,7 +59,7 @@ const EditNodePanel = ({
           max={stepNodes.length}
           value={newStepNum === 0 ? "" : newStepNum}
           onChange={(evt) => {
-            setNewStepNum(Number(evt.target.value))
+            setNewStepNum(Number(evt.currentTarget.value))
           }}
         />
         <button
@@ -84,7 +84,7 @@ const EditNodePanel = ({
             changeNode({
               id: node.id,
               // prevents node from vanishing because the algo thinks it's an ingredient if field is emptied
-              action: evt.target.value.trimStart() || " ",
+              action: evt.currentTarget.value.trimStart() || " ",
             })
           }}
         />
@@ -98,7 +98,7 @@ const EditNodePanel = ({
           onChange={(evt) => {
             changeNode({
               id: Number(node.id),
-              output: evt.target.value.trimStart(),
+              output: evt.currentTarget.value.trimStart(),
             })
           }}
         />
@@ -128,7 +128,7 @@ const EditNodePanel = ({
             name="add ingredient"
             value={newIngredient}
             onChange={(evt) => {
-              setNewIngredient(evt.target.value)
+              setNewIngredient(evt.currentTarget.value)
             }}
             onKeyUp={(evt) => {
               if (evt.key === "Enter") {
