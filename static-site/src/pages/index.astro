@@ -1,8 +1,9 @@
 ---
+import Card from "@/components/Card.astro"
+import Search from "@/components/Search"
+import Layout from "@/layouts/Layout.astro"
+
 import { RecipeSerialized, serializedToSearchable } from "../../../shared"
-import Card from "../components/Card.astro"
-import Search from "../components/Search"
-import Layout from "../layouts/Layout.astro"
 
 const recipeImports = await Astro.glob<{ default: RecipeSerialized }>("../recipeData/*.ts")
 const recipes = recipeImports.map(({ default: recipe }) => serializedToSearchable(recipe))

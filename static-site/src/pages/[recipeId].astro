@@ -1,10 +1,11 @@
 ---
+import Card from "@/components/Card.astro"
+import GraphView from "@/components/GraphView"
+import ListView from "@/components/ListView"
+import RecipeDetails from "@/components/RecipeDetails"
+import Layout from "@/layouts/Layout.astro"
+
 import { RecipeSerialized, serializedToFlowed, serializedToListed } from "../../../shared"
-import Card from "../components/Card.astro"
-import GraphView from "../components/GraphView"
-import ListView from "../components/ListView"
-import RecipeDetails from "../components/RecipeDetails"
-import Layout from "../layouts/Layout.astro"
 
 export const getStaticPaths = async () => {
   const recipes = await Astro.glob<{ default: RecipeSerialized }>("../recipeData/*.ts")

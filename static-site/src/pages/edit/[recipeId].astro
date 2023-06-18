@@ -1,7 +1,8 @@
 ---
+import Builder from "@/components/Builder"
+import Layout from "@/layouts/Layout.astro"
+
 import type { RecipeSerialized } from "../../../../shared"
-import Builder from "../../components/Builder"
-import Layout from "../../layouts/Layout.astro"
 
 export const getStaticPaths = async () => {
   const recipes = await Astro.glob<{ default: RecipeSerialized }>("../../recipeData/*.ts")
