@@ -1,21 +1,18 @@
 ---
+import { getCollection } from "astro:content"
+
 import Builder from "@/components/Builder"
 import Layout from "@/layouts/Layout.astro"
 
-import type { RecipeSerialized } from "../../../../shared"
-
-export const getStaticPaths = async () => {
-  const recipes = await Astro.glob<{ default: RecipeSerialized }>("../../recipeData/*.ts")
-
-  return recipes.map(({ default: recipe }) => ({
+export const getStaticPaths = async () =>
+  (await getCollection("recipes")).map(({ data }) => ({
     params: {
-      recipeId: String(recipe.id),
+      recipeId: String(data.id),
     },
     props: {
-      recipe,
+      recipe: data,
     },
   }))
-}
 
 const { recipe } = Astro.props
 ---

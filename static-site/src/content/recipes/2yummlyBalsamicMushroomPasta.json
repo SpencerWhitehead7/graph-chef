@@ -1,0 +1,245 @@
+{
+  "id": 2,
+  "title": "Yummly Balsamic Mushroom Pasta",
+  "desc": "Lighter than it seems, flavorful and earthy",
+  "size": "2 servings",
+  "tags": [
+    "dinner",
+    "pasta",
+    "vegetarian"
+  ],
+  "data": {
+    "nodes": [
+      {
+        "action": "",
+        "output": "8 oz fettuccine",
+        "id": 1
+      },
+      {
+        "id": 2,
+        "action": "Cook fettuccine",
+        "output": "cooked fettuccine"
+      },
+      {
+        "action": "",
+        "output": "1 tbsp butter",
+        "id": 3
+      },
+      {
+        "action": "",
+        "output": "1 tbsp olive oil",
+        "id": 4
+      },
+      {
+        "action": "",
+        "output": "1/4 c shallot, chopped",
+        "id": 5
+      },
+      {
+        "action": "",
+        "output": "2 clove garlic, minced",
+        "id": 6
+      },
+      {
+        "id": 7,
+        "action": "Melt 1 tbsp butter with olive oil and fry garlic and shallots until just softened",
+        "output": "fried vegetables"
+      },
+      {
+        "action": "",
+        "output": "8 oz mushrooms, sliced",
+        "id": 8
+      },
+      {
+        "id": 9,
+        "action": "Add sliced mushrooms and let cook until brown, ~8min, adding more oil if necessary",
+        "output": "fried vegetables"
+      },
+      {
+        "action": "",
+        "output": "1/4 c balsamic vinegar",
+        "id": 10
+      },
+      {
+        "action": "",
+        "output": "1 tbsp butter",
+        "id": 11
+      },
+      {
+        "id": 12,
+        "action": "Stir in balsamic vinegar, second tbsp butter",
+        "output": "fried vegetables"
+      },
+      {
+        "action": "",
+        "output": "1/4 c cream",
+        "id": 13
+      },
+      {
+        "action": "",
+        "output": "1/4 c grated parmesan",
+        "id": 14
+      },
+      {
+        "id": 15,
+        "action": "Turn off heat, stir in cream, parmesan",
+        "output": "fried vegetables"
+      },
+      {
+        "id": 16,
+        "action": "Add pasta, toss to combine",
+        "output": "pasta dish"
+      },
+      {
+        "action": "",
+        "output": "2 tbsp fresh parsley",
+        "id": 17
+      },
+      {
+        "action": "",
+        "output": "salt",
+        "id": 18
+      },
+      {
+        "action": "",
+        "output": "pepper",
+        "id": 19
+      },
+      {
+        "id": 20,
+        "action": "Add parsley, salt / pepper to taste, toss to combine",
+        "output": "pasta dish"
+      },
+      {
+        "action": "",
+        "output": "parmesan",
+        "id": 21
+      },
+      {
+        "id": 22,
+        "action": "Serve with additional parmesan",
+        "output": "pasta dish"
+      }
+    ],
+    "edges": [
+      {
+        "i": 1,
+        "o": 2
+      },
+      {
+        "i": 3,
+        "o": 7
+      },
+      {
+        "i": 4,
+        "o": 7
+      },
+      {
+        "i": 5,
+        "o": 7
+      },
+      {
+        "i": 6,
+        "o": 7
+      },
+      {
+        "i": 7,
+        "o": 9
+      },
+      {
+        "i": 8,
+        "o": 9
+      },
+      {
+        "i": 9,
+        "o": 12
+      },
+      {
+        "i": 10,
+        "o": 12
+      },
+      {
+        "i": 11,
+        "o": 12
+      },
+      {
+        "i": 12,
+        "o": 15
+      },
+      {
+        "i": 13,
+        "o": 15
+      },
+      {
+        "i": 14,
+        "o": 15
+      },
+      {
+        "i": 2,
+        "o": 16
+      },
+      {
+        "i": 15,
+        "o": 16
+      },
+      {
+        "i": 16,
+        "o": 20
+      },
+      {
+        "i": 17,
+        "o": 20
+      },
+      {
+        "i": 18,
+        "o": 20
+      },
+      {
+        "i": 19,
+        "o": 20
+      },
+      {
+        "i": 20,
+        "o": 22
+      },
+      {
+        "i": 21,
+        "o": 22
+      }
+    ],
+    "positions": {
+      "2": {
+        "x": -350,
+        "y": 820
+      },
+      "7": {
+        "x": 20,
+        "y": 0
+      },
+      "9": {
+        "x": 20,
+        "y": 300
+      },
+      "12": {
+        "x": 20,
+        "y": 500
+      },
+      "15": {
+        "x": 20,
+        "y": 750
+      },
+      "16": {
+        "x": -160,
+        "y": 1000
+      },
+      "20": {
+        "x": -160,
+        "y": 1150
+      },
+      "22": {
+        "x": -160,
+        "y": 1340
+      }
+    }
+  }
+}

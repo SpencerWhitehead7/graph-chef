@@ -6,5 +6,6 @@ dist-ssr
 tsconfig.tsbuildinfo
 stats.html
 output
+.astro
 .firebase
 ___.txt
