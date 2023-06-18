@@ -1,4 +1,5 @@
 import "preact"
+
 import { StateUpdater, useState } from "preact/hooks"
 import ReactFlow, { Controls, Edge, Handle, Position as HandlePosition } from "reactflow"
 
@@ -9,7 +10,6 @@ import type {
   RecipeFlowed,
   RecipeSerialized,
 } from "../../../../shared"
-
 import EditNodePanel from "./EditNodePanel"
 
 // TODO: replace add node button with creating new node on connector drag

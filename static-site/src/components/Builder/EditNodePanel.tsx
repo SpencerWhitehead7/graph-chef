@@ -1,12 +1,13 @@
 import "preact"
+
 import { useState } from "preact/hooks"
 
 import {
   EdgeSerialized,
-  NodeSerialized,
-  RecipeSerialized,
   isIngredientNode,
   isStepNode,
+  NodeSerialized,
+  RecipeSerialized,
 } from "../../../../shared"
 
 type EditNodePanelProps = {

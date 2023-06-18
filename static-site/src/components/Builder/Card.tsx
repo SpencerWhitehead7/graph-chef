@@ -1,4 +1,5 @@
 import "preact"
+
 import type { ComponentChildren } from "preact"
 import type { ReactNode } from "react"
 

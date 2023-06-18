@@ -1,8 +1,8 @@
 import "preact"
+
 import { useMemo, useState } from "preact/hooks"
 
 import type { RecipeSearchable } from "../../../../shared"
-
 import RecipeRow from "./RecipeRow"
 
 type Props = {
