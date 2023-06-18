@@ -1,4 +1,5 @@
 import "preact"
+import "./Builder.css"
 
 import { useState } from "preact/hooks"
 

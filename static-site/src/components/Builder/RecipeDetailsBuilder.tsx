@@ -1,4 +1,5 @@
 import "preact"
+import "./RecipeDetailsBuilder.css"
 
 import type { RecipeSerialized } from "../../../../shared"
 

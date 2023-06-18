@@ -1,4 +1,5 @@
 import "preact"
+import "./ListView.css"
 
 import type { RecipeListed } from "../../../shared"
 

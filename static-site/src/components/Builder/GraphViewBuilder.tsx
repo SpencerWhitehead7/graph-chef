@@ -1,4 +1,6 @@
 import "preact"
+import "reactflow/dist/base.css"
+import "./GraphViewBuilder.css"
 
 import { StateUpdater, useState } from "preact/hooks"
 import ReactFlow, { Controls, Edge, Handle, Position as HandlePosition } from "reactflow"

@@ -1,4 +1,5 @@
 import "preact"
+import "./RecipeRow.css"
 
 import { useState } from "preact/hooks"
 

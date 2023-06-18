@@ -1,4 +1,5 @@
 import "preact"
+import "./Search.css"
 
 import { useMemo, useState } from "preact/hooks"
 

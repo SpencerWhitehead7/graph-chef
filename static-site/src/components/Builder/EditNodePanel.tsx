@@ -1,4 +1,5 @@
 import "preact"
+import "./EditNodePanel.css"
 
 import { useState } from "preact/hooks"
 

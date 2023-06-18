@@ -1,4 +1,6 @@
 import "preact"
+import "reactflow/dist/base.css"
+import "./GraphView.css"
 
 import ReactFlow, { Controls, Edge, Node } from "reactflow"
 
