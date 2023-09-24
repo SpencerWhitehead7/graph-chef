@@ -21,7 +21,7 @@ const RecipeRow = ({ recipe }: Props) => {
         desc={recipe.desc}
         size={recipe.size}
         tags={recipe.tags}
-        linkHref={`/${recipe.id}`}
+        recipeLinkHref={String(recipe.id)}
       />
       <button
         type="button"

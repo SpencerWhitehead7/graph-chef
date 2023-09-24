@@ -1,16 +1,31 @@
 import "preact"
 
 type Props = {
-  linkHref?: string
   title: string
   desc: string
   size: string
   tags: string[]
+  recipeLinkHref?: string
+  editLinkHref?: string
 }
 
-const RecipeDetails = ({ linkHref = "", title, desc, size, tags }: Props) => (
+const RecipeDetails = ({
+  title,
+  desc,
+  size,
+  tags,
+  recipeLinkHref = "",
+  editLinkHref = "",
+}: Props) => (
   <div>
-    <h2>{linkHref === "" ? title : <a href={linkHref}>{title}</a>}</h2>
+    <h2>
+      {recipeLinkHref === "" ? title : <a href={recipeLinkHref}>{title}</a>}
+      {editLinkHref === "" ? null : (
+        <span>
+          &nbsp;<a href={editLinkHref}>Edit</a>
+        </span>
+      )}
+    </h2>
     <p>
       <strong>Description:</strong> {desc}
     </p>

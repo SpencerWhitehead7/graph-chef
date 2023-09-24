@@ -7,7 +7,7 @@ import ListView from "@/components/ListView"
 import RecipeDetails from "@/components/RecipeDetails"
 import Layout from "@/layouts/Layout.astro"
 
-import { serializedToFlowed, serializedToListed } from "../../../shared"
+import { serializedToFlowed, serializedToListed } from "../../../../shared"
 
 export const getStaticPaths = async () =>
   (await getCollection("recipes")).map(({ data }) => ({
@@ -25,7 +25,7 @@ const { title, desc, size, tags } = recipe
 
 <Layout title={`Graph Chef - ${title}`}>
   <main>
-    <RecipeDetails {title} {desc} {size} {tags} />
+    <RecipeDetails {title} {desc} {size} {tags} editLinkHref="edit" , />
     <div class="grid-container">
       <Card>
         <!-- TODO:: Some weird, evil interaction between astro, node, ts, and reactflow causes an error when I try to build and bake it out into a static comp -->
