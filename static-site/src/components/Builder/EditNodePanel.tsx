@@ -3,13 +3,8 @@ import "./EditNodePanel.css"
 
 import { useState } from "preact/hooks"
 
-import {
-  EdgeSerialized,
-  isIngredientNode,
-  isStepNode,
-  NodeSerialized,
-  RecipeSerialized,
-} from "../../../../shared"
+import type { EdgeSerialized, NodeSerialized, RecipeSerialized } from "../../../../shared"
+import { isIngredientNode, isStepNode } from "../../../../shared"
 
 type EditNodePanelProps = {
   key: number
@@ -138,7 +133,7 @@ const EditNodePanel = ({
                     action: "",
                     output: newIngredient,
                   },
-                  [{ o: Number(node.id) }]
+                  [{ o: Number(node.id) }],
                 )
                 setNewIngredient("")
               }

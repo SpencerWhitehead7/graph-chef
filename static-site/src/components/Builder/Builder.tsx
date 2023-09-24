@@ -3,18 +3,15 @@ import "./Builder.css"
 
 import { useState } from "preact/hooks"
 
+import type { EdgeSerialized, NodeSerialized, Position, RecipeSerialized } from "../../../../shared"
 import {
   addEdge,
   addNode,
   changeNode,
   changeNodePosition,
   changeNodeStepNum,
-  EdgeSerialized,
   isStepNode,
-  NodeSerialized,
   normalizeRecipe,
-  Position,
-  RecipeSerialized,
   removeEdge,
   removeNode,
   serializedToFlowed,
@@ -45,10 +42,10 @@ const emptyRecipe: RecipeSerialized = {
 const Builder = ({ recipe: initialRecipe = emptyRecipe }: Props) => {
   const [recipe, setRecipe] = useState<RecipeSerialized>(initialRecipe)
   const [nextId, setNextId] = useState<number>(
-    Math.max(...recipe.data.nodes.map(({ id }) => id)) + 1
+    Math.max(...recipe.data.nodes.map(({ id }) => id)) + 1,
   )
   const [nextPosition, setNextPosition] = useState(
-    recipe === emptyRecipe ? { x: 20, y: 20 } : { x: 0, y: 0 }
+    recipe === emptyRecipe ? { x: 20, y: 20 } : { x: 0, y: 0 },
   )
 
   const onChangeMeta = (val: Partial<Omit<RecipeSerialized, "data">>) => {

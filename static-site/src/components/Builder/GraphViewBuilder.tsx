@@ -2,8 +2,10 @@ import "preact"
 import "reactflow/dist/base.css"
 import "./GraphViewBuilder.css"
 
-import { StateUpdater, useState } from "preact/hooks"
-import ReactFlow, { Controls, Edge, Handle, Position as HandlePosition } from "reactflow"
+import type { StateUpdater } from "preact/hooks"
+import { useState } from "preact/hooks"
+import type { Edge } from "reactflow"
+import ReactFlow, { Controls, Handle, Position as HandlePosition } from "reactflow"
 
 import type {
   EdgeSerialized,

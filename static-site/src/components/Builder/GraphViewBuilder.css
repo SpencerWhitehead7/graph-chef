@@ -1,17 +1,17 @@
 /* beat the lib's dumb built in styles */
 .react-flow__node {
-  border: none;
+  border: none !important;
 }
 .react-flow__edge-path {
-  stroke: deepskyblue;
-  stroke-width: 2px;
+  stroke: deepskyblue !important;
+  stroke-width: 2px !important;
 }
 .react-flow__handle {
-  width: var(--m);
-  height: var(--m);
-  border-radius: var(--s);
-  border: 2px solid deepskyblue;
-  background-color: white;
+  width: var(--m) !important;
+  height: var(--m) !important;
+  border-radius: var(--s) !important;
+  border: 2px solid deepskyblue !important;
+  background-color: white !important;
 }
 
 .graphViewBuilder {
